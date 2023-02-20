@@ -47,9 +47,9 @@
         return `Includes a`
     }
     else {
-        return `Does not include a`
-    }
-}
+           return `Does not include a`
+       }
+   }
 
    console.log(checkForAlphabetA("Tanay")); // Includes a
    console.log(checkForAlphabetA("Jeep")); // Does not include a
