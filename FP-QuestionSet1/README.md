@@ -6,7 +6,7 @@
 2. You can make use of basic methods such as .length, toLowerCase(), toUpperCase() if needed.
 3. Do NOT use for-loops.
 
-## Questions
+**Questions**
 
 1. Write an ES6 function that takes an array of numbers and returns an array with each number incremented by 3 using the map method.
 
