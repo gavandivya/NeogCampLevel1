@@ -13,6 +13,6 @@
 
 #### Functional Programming
 
-1) [FP Set-1](https://github.com/gavandivya/NeogCampLevel1/tree/main/FPQuestionSet1)
+1) [FP Set-1](https://github.com/gavandivya/NeogCampLevel1/tree/main/FP-QuestionSet1)
 
-2) [FP Set-2](https://github.com/gavandivya/NeogCampLevel1/tree/main/FPQuestionSet2)
+2) [FP Set-2](https://github.com/gavandivya/NeogCampLevel1/tree/main/FP-QuestionSet2)
