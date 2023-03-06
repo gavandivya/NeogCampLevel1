@@ -31,3 +31,7 @@
 11. Write an ES6 function that takes an array of objects representing students with properties name and grade. Return the first student object that has a grade of "B" and they are also a scholarship student.
 
 12. Write an ES6 function that takes an array of objects containing Bollywood movie information (title, director, year, rating) and returns an array with only the movie titles that were made before 1990 and has a rating above 8.0. (Question Level: tough)
+
+
+![image](https://user-images.githubusercontent.com/49062060/223032393-567e6e95-e27c-4475-acdc-9f83b969603d.png)
+
