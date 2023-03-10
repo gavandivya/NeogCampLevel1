@@ -37,3 +37,6 @@
 14. Write an ES6 function that takes an array of strings and returns a single string that is the concatenation of all the strings using the reduce function.
 
 15. Write an ES6 function that takes an array of numbers and returns the minimum number using the reduce function.
+
+
+<img width="564" alt="image" src="https://user-images.githubusercontent.com/49062060/224225745-ac7c6648-b2e1-48d8-95c5-945b917e69e7.png">
