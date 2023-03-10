@@ -1,239 +1,212 @@
 /**
- * # Functional Programming Set 3
-
-**Instructions:** 
-1. Make use of .filter(), .find() and .reduce() methods. 
-2. You can make use of basic methods such as .length, toLowerCase(), toUpperCase() if needed. 
-3. Do NOT use for-loops.
- */
+ * # Functional Programming Set 3*/
 
 //1. Write an ES6 function that takes an array of objects representing cars with properties make, model, and year. Return the first car object that is a Toyota and the year is after 2010.
 
-```jsx
-    const cars = [
-      { make: "Toyota", model: "Corolla", year: 2010 },
-      { make: "Honda", model: "Civic", year: 2012 },
-      { make: "Toyota", model: "Camry", year: 2015 },
-      { make: "Ford", model: "Mustang", year: 2018 },
-    ];
-    
-    // Your code here
-    
-    const toyotaCar = findToyotaCar(cars);
-    console.log(toyotaCar); 
-    // Output: { make: "Toyota", model: "Camry", year: 2015 }
-    ```
+const cars = [
+    { make: "Toyota", model: "Corolla", year: 2010 },
+    { make: "Honda", model: "Civic", year: 2012 },
+    { make: "Toyota", model: "Camry", year: 2015 },
+    { make: "Ford", model: "Mustang", year: 2018 },
+];
 
-    //2. Write an ES6 function that takes an array of objects containing car information (make, model, year) and returns an array with only the cars that were made after the year 2012.
+const findToyotaCar = (carsArray) => carsArray.find((car) => car.make == "Toyota" && car.year > 2010);
 
-    ```jsx
-    const cars = [
-      { make: "Toyota", model: "Corolla", year: 2010 },
-      { make: "Honda", model: "Civic", year: 2012 },
-      { make: "Toyota", model: "Camry", year: 2015 },
-      { make: "Ford", model: "Mustang", year: 2018 },
-    ];
-    
-    // Your code here
-    
-    const getCars = getCarDetails(cars);
-    console.log(getCars);
-    // Output: [{ make: "Toyota", model: "Camry", year: 2015 }, { make: "Ford", model: "Mustang", year: 2018 }]
-    ```
+const toyotaCar = findToyotaCar(cars);
+console.log(toyotaCar);
+// Output: { make: "Toyota", model: "Camry", year: 2015 }
 
-    //3. Write an ES6 function that takes an array of objects representing products with properties name, price, and category. Return the first product object that is in the category "electronics".
+//2. Write an ES6 function that takes an array of objects containing car information (make, model, year) and returns an array with only the cars that were made after the year 2012.
 
-    ```jsx
-    const products = [
-      { name: "Toothbrush", price: 29, category: "health" },
-      { name: "Coffee Maker", price: 99, category: "home" },
-    	{ name: "iPad", price: 799, category: "electronics" },
-      { name: "Smartwatch", price: 199, category: "electronics" },
-    ];
-    
-    // Your code here
-    
-    const electronicsProduct = findElectronicsProduct(products);
-    console.log(electronicsProduct); 
-    // Output: { name: "iPad", price: 799, category: "electronics" }
-    ```
+const cars1 = [
+    { make: "Toyota", model: "Corolla", year: 2010 },
+    { make: "Honda", model: "Civic", year: 2012 },
+    { make: "Toyota", model: "Camry", year: 2015 },
+    { make: "Ford", model: "Mustang", year: 2018 },
+];
 
-    //4. Write an ES6 function that takes an array of objects representing products with properties name, price and category. Return all the products object that are in the category "electronics".
+const getCarDetails = (cars) => cars.filter((car) => car.year > 2012)
+const getCars = getCarDetails(cars1);
+console.log(getCars);
+// Output: [{ make: "Toyota", model: "Camry", year: 2015 }, { make: "Ford", model: "Mustang", year: 2018 }]
 
-    ```jsx
-    const products = [
-      { name: "Toothbrush", price: 29, category: "health" },
-      { name: "Coffee Maker", price: 99, category: "home" },
-    	{ name: "iPad", price: 799, category: "electronics" },
-      { name: "Smartwatch", price: 199, category: "electronics" },
-    ];
-    
-    // Your code here
-    
-    const electronicProducts = getAllElectronicProducts(products);
-    console.log(electronicProducts); 
-    // Output: [{ name: "iPad", price: 799, category: "electronics" }, { name: "Smartwatch", price: 199, category: "electronics" }]
-    ```
+//3. Write an ES6 function that takes an array of objects representing products with properties name, price, and category. Return the first product object that is in the category "electronics".
 
-    //5. Write an ES6 function that takes an array of objects containing student information (name, age, grade) and returns an array with only the students who have a grade above a certain value.
+const products = [
+    { name: "Toothbrush", price: 29, category: "health" },
+    { name: "Coffee Maker", price: 99, category: "home" },
+    { name: "iPad", price: 799, category: "electronics" },
+    { name: "Smartwatch", price: 199, category: "electronics" },
+];
 
-    ```jsx
-    const students = [
-      { name: "Alice", age: 16, grade: 90 },
-      { name: "Bob", age: 17, grade: 80 },
-      { name: "Charlie", age: 15, grade: 95 },
-      { name: "David", age: 16, grade: 85 },
-    ];
-    // Your code here
-    
-    
-    const highGradeStudents = filterStudentsByGrade(students, 85);
-    console.log(highGradeStudents); 
-    // Output: [{ name: "Alice", age: 16, grade: 90 }, { name: "Charlie", age: 15, grade: 95 }]
-    ```
+const findElectronicsProduct = (products) => products.find((prod) => prod.category == "electronics")
 
-    //6. Write an ES6 function that takes an array of objects representing books with properties title, author and pageCount. Return the first book object that has more than 500 pages.
+const electronicsProduct = findElectronicsProduct(products);
+console.log(electronicsProduct);
+// Output: { name: "iPad", price: 799, category: "electronics" }
 
-    ```jsx
-    const books = [
-      { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 },
-      { title: "To Kill a Mockingbird", author: "Harper Lee", pageCount: 281 },
-      { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", pageCount: 193 },
-      { title: "The Name of the Wind", author: "Patrick Rothfuss", pageCount: 662 },
-    ];
-    
-    // Your code here
-    
-    const bookWithMoreThan500Pages = findBookWithMoreThan500Pages(books);
-    console.log(bookWithMoreThan500Pages); 
-    // Output: { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 }
-    ```
+//4. Write an ES6 function that takes an array of objects representing products with properties name, price and category. Return all the products object that are in the category "electronics".
 
-    //7. Write an ES6 function that takes an array of objects containing customer information (name, age, gender) and returns an array with only the customers who are of gender Male.
+const products1 = [
+    { name: "Toothbrush", price: 29, category: "health" },
+    { name: "Coffee Maker", price: 99, category: "home" },
+    { name: "iPad", price: 799, category: "electronics" },
+    { name: "Smartwatch", price: 199, category: "electronics" },
+];
 
-    ```jsx
-    const customers = [
-      { name: 'John', age: 25, gender: 'Male' },
-      { name: 'Jane', age: 30, gender: 'Female' },
-      { name: 'Bob', age: 40, gender: 'Male' },
-      { name: 'Alice', age: 35, gender: 'Female' },
-    ];
-    // Your code here
-    
-    const maleCustomers = getMaleCustomers(customers);
-    console.log(maleCustomers); 
-    // Output: [{ name: 'John', age: 25, gender: 'Male' }, { name: 'Bob', age: 40, gender: 'Male' }]
-    ```
+const getAllElectronicProducts = (products) => products.filter((prod) => prod.category == "electronics")
 
-    //8. Write an ES6 function that takes an array of objects containing game information (title, developer, genre) and returns an array with all the games of a certain genre.
+const electronicProducts = getAllElectronicProducts(products1);
+console.log(electronicProducts);
+// Output: [{ name: "iPad", price: 799, category: "electronics" }, { name: "Smartwatch", price: 199, category: "electronics" }]
 
-    ```jsx
-    const games = [
-      {title: "The Witcher 3: Wild Hunt", developer: "CD Projekt Red", genre: "RPG"},
-      {title: "Grand Theft Auto V", developer: "Rockstar North", genre: "Action"},
-      {title: "Portal 2", developer: "Valve Corporation", genre: "Puzzle"},
-      {title: "The Legend of Zelda: Breath of the Wild", developer: "Nintendo", genre: "Adventure"}
-    ];
-    // Your code here
-    
-    const filteredGames = filterByGenre(games, "RPG");
-    console.log(filteredGames);
-    // Output: [{title: "The Witcher 3: Wild Hunt", developer: "CD Projekt Red", genre: "RPG"}]
-    ```
+//5. Write an ES6 function that takes an array of objects containing student information (name, age, grade) and returns an array with only the students who have a grade above a certain value.
 
-    //9. Write an ES6 function that takes an array of objects containing car information (make, model, year) and returns an array with only the car model that were made after the year 2012.
+const students = [
+    { name: "Alice", age: 16, grade: 90 },
+    { name: "Bob", age: 17, grade: 80 },
+    { name: "Charlie", age: 15, grade: 95 },
+    { name: "David", age: 16, grade: 85 },
+];
+const filterStudentsByGrade = (arr, grade) => arr.filter((student) => student.grade > grade);
 
-    ```jsx
-    const cars = [
-      { make: "Toyota", model: "Corolla", year: 2010 },
-      { make: "Honda", model: "Civic", year: 2012 },
-      { make: "Toyota", model: "Camry", year: 2015 },
-      { make: "Ford", model: "Mustang", year: 2018 },
-    ];
-    
-    // Your code here
-    
-    const carModels = getCarModel(cars);
-    console.log(carModels);
-    // Output: ["Camry", "Mustang"]
-    ```
+const highGradeStudents = filterStudentsByGrade(students, 85);
+console.log(highGradeStudents);
+// Output: [{ name: "Alice", age: 16, grade: 90 }, { name: "Charlie", age: 15, grade: 95 }]
 
-    //10. Write an ES6 function that takes an array of objects representing books with properties title, author and pageCount. Return the all book titles that have more than 700 pages.
+//6. Write an ES6 function that takes an array of objects representing books with properties title, author and pageCount. Return the first book object that has more than 500 pages.
 
-    ```jsx
-    const books = [
-      { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 },
-      { title: "To Kill a Mockingbird", author: "Harper Lee", pageCount: 281 },
-      { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", pageCount: 193 },
-      { title: "The Name of the Wind", author: "Patrick Rothfuss", pageCount: 662 },
-    ];
-    
-    // Your code here
-    
-    const booksWithMoreThan500Pages = getTitlesWithMoreThan500Pages(books);
-    console.log(booksWithMoreThan500Pages); 
-    // Output: ["The Lord of the Rings"]
-    ```
+const books = [
+    { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", pageCount: 281 },
+    { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", pageCount: 193 },
+    { title: "The Name of the Wind", author: "Patrick Rothfuss", pageCount: 662 },
+];
 
-    //11. Write an ES6 function that takes an array of numbers and returns the sum of all the even numbers in the array using the reduce function.
+const findBookWithMoreThan500Pages = (books) => {
+    return books.find((book) => book.pageCount > 500)
 
-    ```jsx
-    const numbers = [12, 23, 4, 2, 11, 21] 
-    // Your code here
-    
-    console.log(sumOfEvenNumbers(numbers))
-    // Output: 18
-    ```
+}
+const bookWithMoreThan500Pages = findBookWithMoreThan500Pages(books);
+console.log(bookWithMoreThan500Pages);
+// Output: { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 }
 
-    //12. Write an ES6 function that takes an array of objects representing students with properties name and score, and returns the average score of all the students using the reduce function.
+//7. Write an ES6 function that takes an array of objects containing customer information (name, age, gender) and returns an array with only the customers who are of gender Male.
 
-    ```jsx
-    const students = [
-      { name: 'John', score: 80 },
-      { name: 'Jane', score: 90 },
-      { name: 'Bob', score: 75 },
-      { name: 'Alice', score: 85 },
-    ];
-    
-    // Your code here
-    
-    console.log(getAverageScore(students)); 
-    // Output: 82.5
-    ```
+const customers = [
+    { name: 'John', age: 25, gender: 'Male' },
+    { name: 'Jane', age: 30, gender: 'Female' },
+    { name: 'Bob', age: 40, gender: 'Male' },
+    { name: 'Alice', age: 35, gender: 'Female' },
+];
+const getMaleCustomers = (arr) => arr.filter((ele) => ele.gender === "Male")
+const maleCustomers = getMaleCustomers(customers);
+console.log(maleCustomers);
+// Output: [{ name: 'John', age: 25, gender: 'Male' }, { name: 'Bob', age: 40, gender: 'Male' }]
 
-    //13. Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns the total cost of all the products using the reduce function.
+//8. Write an ES6 function that takes an array of objects containing game information (title, developer, genre) and returns an array with all the games of a certain genre.
 
-    ```jsx
-    const products = [
-      { name: 'Shirt', price: 20, quantity: 2 },
-      { name: 'Pants', price: 30, quantity: 1 },
-      { name: 'Shoes', price: 50, quantity: 1 },
-      { name: 'Hat', price: 10, quantity: 3 },
-    ];
-    
-    // Your code here
-    
-    console.log(getTotalCost(products)); 
-    // Output: 150
-    ```
+const games = [
+    { title: "The Witcher 3: Wild Hunt", developer: "CD Projekt Red", genre: "RPG" },
+    { title: "Grand Theft Auto V", developer: "Rockstar North", genre: "Action" },
+    { title: "Portal 2", developer: "Valve Corporation", genre: "Puzzle" },
+    { title: "The Legend of Zelda: Breath of the Wild", developer: "Nintendo", genre: "Adventure" }
+];
 
-    //14. Write an ES6 function that takes an array of strings and returns a single string that is the concatenation of all the strings using the reduce function.
+const filterByGenre = (arr, genre) => arr.filter((ele) => ele.genre === genre);
 
-    ```jsx
-    const strings = ['Hello', ' ', 'world', '!'];
-    // Your code here
-    
-    console.log(concatenateStrings(strings)); 
-    // Output: "Hello world!"
-    ```
+const filteredGames = filterByGenre(games, "RPG");
+console.log(filteredGames);
+// Output: [{title: "The Witcher 3: Wild Hunt", developer: "CD Projekt Red", genre: "RPG"}]
 
-    //15. Write an ES6 function that takes an array of numbers and returns the minimum number using the reduce function.
+//9. Write an ES6 function that takes an array of objects containing car information (make, model, year) and returns an array with only the car model that were made after the year 2012.
 
-    ```jsx
-    const numbers = [10, 5, 8, 3, 6];
-    
-    // Your code here
-    
-    console.log(getMinimumNumber(numbers)); 
+const cars2 = [
+    { make: "Toyota", model: "Corolla", year: 2010 },
+    { make: "Honda", model: "Civic", year: 2012 },
+    { make: "Toyota", model: "Camry", year: 2015 },
+    { make: "Ford", model: "Mustang", year: 2018 },
+];
+
+const getCarModel = (cars) => cars.filter((car) => car.year > 2010);
+
+const carModels = getCarModel(cars2);
+console.log(carModels);
+// Output: ["Camry", "Mustang"]
+
+//10. Write an ES6 function that takes an array of objects representing books with properties title, author and pageCount. Return the all book titles that have more than 700 pages.
+
+const books1 = [
+    { title: "The Lord of the Rings", author: "J.R.R. Tolkien", pageCount: 1178 },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", pageCount: 281 },
+    { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", pageCount: 193 },
+    { title: "The Name of the Wind", author: "Patrick Rothfuss", pageCount: 662 },
+];
+
+const getTitlesWithMoreThan500Pages = (books1) => books1.filter((book) => book.pageCount > 700).map((e) => e.title);
+
+const booksWithMoreThan500Pages = getTitlesWithMoreThan500Pages(books1);
+console.log(booksWithMoreThan500Pages);
+// Output: ["The Lord of the Rings"]
+
+//11. Write an ES6 function that takes an array of numbers and returns the sum of all the even numbers in the array using the reduce function.
+
+const numbers = [12, 23, 4, 2, 11, 21]
+
+const sumOfEvenNumbers = (arr) => arr.reduce((sum, curr) => {
+    if (curr % 2 == 0) {
+        sum += curr
+    }
+    return sum;
+}, 0)
+
+console.log(sumOfEvenNumbers(numbers));
+// Output: 18
+
+//12. Write an ES6 function that takes an array of objects representing students with properties name and score, and returns the average score of all the students using the reduce function.
+
+const students1 = [
+    { name: 'John', score: 80 },
+    { name: 'Jane', score: 90 },
+    { name: 'Bob', score: 75 },
+    { name: 'Alice', score: 85 },
+];
+const getAverageScore = (arr) => arr.reduce((sum, curr) => sum += curr.score, 0) / arr.length;
+console.log(getAverageScore(students1));
+// Output: 82.5
+
+//13. Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns the total cost of all the products using the reduce function.
+
+const products2 = [
+    { name: 'Shirt', price: 20, quantity: 2 },
+    { name: 'Pants', price: 30, quantity: 1 },
+    { name: 'Shoes', price: 50, quantity: 1 },
+    { name: 'Hat', price: 10, quantity: 3 },
+];
+
+const getTotalCost = (arr) => arr.reduce((total, curr) => total += curr.price * curr.quantity, 0);
+
+console.log(getTotalCost(products2));
+// Output: 150
+
+//14. Write an ES6 function that takes an array of strings and returns a single string that is the concatenation of all the strings using the reduce function.
+
+const strings = ['Hello', ' ', 'world', '!'];
+
+const concatenateStrings = (arr) => arr.reduce((curr, concat) => curr += concat, "");
+
+console.log(concatenateStrings(strings));
+// Output: "Hello world!"
+
+//15. Write an ES6 function that takes an array of numbers and returns the minimum number using the reduce function.
+
+const numbers1 = [10, 5, 8, 3, 6];
+
+const getMinimumNumber = (arr) => arr.reduce((min, curr) => {
+    if (min > curr) {
+        min = curr;
+    }
+    return min;
+}, arr[0]);
+console.log(getMinimumNumber(numbers1));
     // Output: 3
-    ```
