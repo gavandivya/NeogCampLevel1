@@ -27,3 +27,6 @@
 9. Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns an object with the most expensive product.
 
 10. Write an ES6 function that takes an array of strings and returns an object with the count of each string.
+
+
+<img width="756" alt="image" src="https://user-images.githubusercontent.com/49062060/227019381-a10ed107-0764-4773-9bea-c4b4520aec3a.png">
