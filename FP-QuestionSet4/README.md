@@ -6,7 +6,9 @@
 2. You can make use of basic methods such as .length, toLowerCase(), toUpperCase() if needed.
 3. Do NOT use for-loops.
 
-4. Given an array, write an ES6 function that returns the total length of all the strings in an array.
+### Questions
+
+1. Given an array, write an ES6 function that returns the total length of all the strings in an array.
 
    ```jsx
    const strings = ["apple", "banana", "cherry", "date", "blueberry"];
@@ -16,7 +18,7 @@
    // Output: 30
    ```
 
-5. Write an ES6 function sumSquares that takes an array of numbers and returns the sum of the squares of all the numbers in the array
+2. Write an ES6 function sumSquares that takes an array of numbers and returns the sum of the squares of all the numbers in the array
 
    ```jsx
    const numbers = [1, 2, 3, 4, 5];
@@ -26,7 +28,7 @@
    // Output: 55
    ```
 
-6. Write an ES6 function that calculates and returns the total value of all items in an array of objects.
+3. Write an ES6 function that calculates and returns the total value of all items in an array of objects.
 
    ```jsx
    const items = [
@@ -40,7 +42,7 @@
    // Output: 60
    ```
 
-7. Write an ES6 function that takes an array of strings as input and concatenates them into a single string.
+4. Write an ES6 function that takes an array of strings as input and concatenates them into a single string.
 
    ```jsx
    // Your code here
@@ -48,7 +50,7 @@
    console.log(concatStrings(["this", "is", "fun"])); // Output: 'thisisfun'
    ```
 
-8. Write an ES6 function to multiply and return all the elements of a given array.
+5. Write an ES6 function to multiply and return all the elements of a given array.
 
    ```jsx
    const numbers = [1, 2, 3, 4, 5];
@@ -58,7 +60,7 @@
    // Output: 120
    ```
 
-9. Write an ES6 function that takes an array of strings and returns the longest string.
+6. Write an ES6 function that takes an array of strings and returns the longest string.
 
    ```jsx
    const strings = ["neogcamp", "Haule Haule", "code", "Batman", "Awesome"];
@@ -68,48 +70,48 @@
    // Output: 'Haule Haule'
    ```
 
-10. Write an ES6 function that takes an array of objects with name and age property, and returns the name of the oldest person.
+7. Write an ES6 function that takes an array of objects with name and age property, and returns the name of the oldest person.
 
-    ```jsx
-    const people = [
-      { name: "Jeena", age: 25 },
-      { name: "Priya", age: 30 },
-      { name: "Naina", age: 45 },
-    ];
-    // Your code here
+   ```jsx
+   const people = [
+     { name: "Jeena", age: 25 },
+     { name: "Priya", age: 30 },
+     { name: "Naina", age: 45 },
+   ];
+   // Your code here
 
-    console.log(oldestPersonName(people));
-    // Output: 'Naina'
-    ```
+   console.log(oldestPersonName(people));
+   // Output: 'Naina'
+   ```
 
-11. Write an ES6 function that takes an array of objects representing people with properties name and age, and returns an object with the average age of all the people.
+8. Write an ES6 function that takes an array of objects representing people with properties name and age, and returns an object with the average age of all the people.
 
-    ```jsx
-    const people = [
-      { name: "Alice", age: 25 },
-      { name: "Bob", age: 30 },
-      { name: "Charlie", age: 35 },
-      { name: "David", age: 40 },
-    ];
-    // Your code here
+   ```jsx
+   const people = [
+     { name: "Alice", age: 25 },
+     { name: "Bob", age: 30 },
+     { name: "Charlie", age: 35 },
+     { name: "David", age: 40 },
+   ];
+   // Your code here
 
-    console.log(getAverageAge(people));
-    // Output: { averageAge: 32.5 }
-    ```
+   console.log(getAverageAge(people));
+   // Output: { averageAge: 32.5 }
+   ```
 
-12. Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns an object with the most expensive product.
+9. Write an ES6 function that takes an array of objects representing products with properties name, price, and quantity, and returns an object with the most expensive product.
 
-    ```jsx
-    const products = [
-      { name: "Bread", price: 10, quantity: 2 },
-      { name: "Clips", price: 20, quantity: 5 },
-      { name: "Knife", price: 30, quantity: 1 },
-      { name: "Slipper", price: 40, quantity: 3 },
-    ];
-    // Your code here
+   ```jsx
+   const products = [
+     { name: "Bread", price: 10, quantity: 2 },
+     { name: "Clips", price: 20, quantity: 5 },
+     { name: "Knife", price: 30, quantity: 1 },
+     { name: "Slipper", price: 40, quantity: 3 },
+   ];
+   // Your code here
 
-    console.log(findMostExpensiveProduct(products));
-    // { name: "Slipper", price: 40, quantity: 3 }
-    ```
+   console.log(findMostExpensiveProduct(products));
+   // { name: "Slipper", price: 40, quantity: 3 }
+   ```
 
-13. Write an ES6 function that takes an array of strings and returns an object with the count of each string.
+10. Write an ES6 function that takes an array of strings and returns an object with the count of each string.
