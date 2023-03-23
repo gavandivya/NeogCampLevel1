@@ -18,27 +18,27 @@
    // Hello, welcome to my portfolio!
    ```
 
-    //2. Write a function ‘delayedAddition’ that takes in two numbers and consoles their sum after a delay of 4 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
+  //2. Write a function ‘delayedAddition’ that takes in two numbers and consoles their sum after a delay of 4 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
 
-    ```jsx
+  ```jsx
    // Your code here
 
    delayedAddition(2, 3);
    // 5
    ```
 
-    //3. Write a function ‘delayAlert’ that takes in a message ‘Hello, world!’ and a delay time in milliseconds, and displays the message in an alert box after the specified delay time using setTimeout. You can practice this question in any JS editor or your browser console.
+  //3. Write a function ‘delayAlert’ that takes in a message ‘Hello, world!’ and a delay time in milliseconds, and displays the message in an alert box after the specified delay time using setTimeout. You can practice this question in any JS editor or your browser console.
 
-    ```jsx
+  ```jsx
    // Your Code here
 
    delayedAlert("Hello, world!", 2000);
    // Should display an alert box with the message, Hello, world!
    ```
 
-    //4. Write a function delayedLoop that takes a number 3 and consoles a message 'Hello' three times after a delay of 1 second each, using a for-loop and setTimeout. You can practice this question in any JS editor or your browser console.
+  //4. Write a function delayedLoop that takes a number 3 and consoles a message 'Hello' three times after a delay of 1 second each, using a for-loop and setTimeout. You can practice this question in any JS editor or your browser console.
 
-    ```jsx
+  ```jsx
    // Your Code here
 
    delayedLoop(3);
@@ -49,14 +49,14 @@
    // Hello -- after another 1 second
    ```
 
-    //5. Make a fake fetch call that takes a message and a boolean value to get data and console the message received from the server. A fake fetch has been provided. You can practice this question in any JS editor or your browser console.
+  //5. Make a fake fetch call that takes a message and a boolean value to get data and console the message received from the server. A fake fetch has been provided. You can practice this question in any JS editor or your browser console.
 
 
-    // 6. EXAMPLE QUESTION: (Solution has been provided for this question for your understanding)
+  // 6. EXAMPLE QUESTION: (Solution has been provided for this question for your understanding)
 
-    //    Use this URL - https://example.com/api/itemlist to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+  //    Use this URL - https://example.com/api/itemlist to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
 
-    ```jsx
+  ```jsx
    const fakeFetch = (url) => {
      return new Promise((resolve, reject) => {
        setTimeout(() => {
@@ -98,17 +98,17 @@
    // The data you are looking for, does not exist.
    ```
 
-    //    ### Explanation:
+  //    ### Explanation:
 
-    //    In the above code solution, we are making a fakeFetch function call with the URL _`https://example.com/api/itemlist`_.
+  //    In the above code solution, we are making a fakeFetch function call with the URL _`https://example.com/api/itemlist`_.
 
-    //    If the Promise is resolved, the **`then`**method is executed with the successful response as the argument, and the console.log statement outputs the response object to the console.
+  //    If the Promise is resolved, the **`then`**method is executed with the successful response as the argument, and the console.log statement outputs the response object to the console.
 
-    //    If the Promise is rejected, the **`catch`**method is executed with the error object as the argument, and the `if`statement checks if the error status is equal to 404. If the error status is 404, the message "The data you are looking for, does not exist." is displayed in the HTML element with ID "output".
+  //    If the Promise is rejected, the **`catch`**method is executed with the error object as the argument, and the `if`statement checks if the error status is equal to 404. If the error status is 404, the message "The data you are looking for, does not exist." is displayed in the HTML element with ID "output".
 
-    //7. Use this URL - https://example.com/api/chat to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+  //7. Use this URL - https://example.com/api/chat to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
 
-    ```jsx
+  ```jsx
    const fakeFetch = (url) => {
      return new Promise((resolve, reject) => {
        setTimeout(() => {
@@ -135,9 +135,9 @@
    // We are facing high demand at the moment. Please check back later in sometime.
    ```
 
-    //8. Use this URL - https://example.com/api/itemlist to make a fake fetch call and list out all the items as an ordered list on the DOM. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+  //8. Use this URL - https://example.com/api/itemlist to make a fake fetch call and list out all the items as an ordered list on the DOM. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
 
-    ```jsx
+  ```jsx
    const fakeFetch = (url) => {
      return new Promise((resolve, reject) => {
        setTimeout(() => {
@@ -169,9 +169,9 @@
    3. Dairy Milk -- INR 20 -- 30
    ```
 
-    //9. Use this URL - https://example.com/api/data to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+  //9. Use this URL - https://example.com/api/data to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
 
-    ```jsx
+  ```jsx
    const fakeFetch = (url) => {
      return new Promise((resolve, reject) => {
        setTimeout(() => {
@@ -198,9 +198,9 @@
    // Internal Server Error! The server crashed. Please try again in some time.
    ```
 
-    //10. Use this URL - https://example.com/api/profile to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+  //10. Use this URL - https://example.com/api/profile to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
 
-    ```jsx
+  ```jsx
     const fakeFetch = (url) => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
