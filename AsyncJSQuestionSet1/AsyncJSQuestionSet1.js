@@ -8,55 +8,72 @@
 4. You can make use of some methods such as .length, toLowerCase(), toUpperCase() and .join() if needed.
 5. An example has been provided for fetch call related questions for your understanding.**/
 
-
 //1. Write a function ‘delayedGreeting’ that consoles a greeting message after a delay of 2 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
 
+const delayedGreeting = () => {
+  setTimeout(() => {
+    console.log("Hello, welcome to my portfolio!");
+  }, 2000)
+}
+delayedGreeting();
+// Output - Hello, welcome to my portfolio!
+
+//2. Write a function ‘delayedAddition’ that takes in two numbers and consoles their sum after a delay of 4 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
+
+const delayedAddition = (a, b) => {
+  setTimeout(() => {
+    console.log(a + b);
+  }, 4000);
+}
+delayedAddition(2, 3);
+// Output - 5
+
+//3. Write a function ‘delayAlert’ that takes in a message ‘Hello, world!’ and a delay time in milliseconds, and displays the message in an alert box after the specified delay time using setTimeout. You can practice this question in any JS editor or your browser console.
+
+const delayedAlert = (message, delay) => {
+  setTimeout(() => {
+    alert(message);
+  }, delay)
+}
+delayedAlert("Hello, world!", 2000);
+
+//4. Write a function delayedLoop that takes a number 3 and consoles a message 'Hello' three times after a delay of 1 second each, using a for-loop and setTimeout. You can practice this question in any JS editor or your browser console.
+
+const delayedLoop = (count) => {
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      console.log("Hello" + i)
+    }, i * 1000)
+  }
+}
+
+//way2
+for (var i = 0; i < 5; i++) {
+  (function (i) {
+    setTimeout(function () {
+      console.log('value is ', i);
+    }, 3000);
+  })(i);
+}
+
+delayedLoop(3);
+
+//https://codehandbook.org/understanding-settimeout-inside-for-loop-in-javascript/
+
+// should print Hello three times after 1 second each
+// Output:
+// Hello -- after 1 second
+// Hello -- after another 1 second
+// Hello -- after another 1 second
+
+//5. Make a fake fetch call that takes a message and a boolean value to get data and console the message received from the server. A fake fetch has been provided. You can practice this question in any JS editor or your browser console.
+
+
+// 6. EXAMPLE QUESTION: (Solution has been provided for this question for your understanding)
+
+//    Use this URL - https://example.com/api/itemlist to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
+
 ```jsx
-   // Your Code here
-
-   delayedGreeting();
-   // Hello, welcome to my portfolio!
-   ```
-
-  //2. Write a function ‘delayedAddition’ that takes in two numbers and consoles their sum after a delay of 4 seconds using setTimeout. You can practice this question in any JS editor or your browser console.
-
-  ```jsx
-   // Your code here
-
-   delayedAddition(2, 3);
-   // 5
-   ```
-
-  //3. Write a function ‘delayAlert’ that takes in a message ‘Hello, world!’ and a delay time in milliseconds, and displays the message in an alert box after the specified delay time using setTimeout. You can practice this question in any JS editor or your browser console.
-
-  ```jsx
-   // Your Code here
-
-   delayedAlert("Hello, world!", 2000);
-   // Should display an alert box with the message, Hello, world!
-   ```
-
-  //4. Write a function delayedLoop that takes a number 3 and consoles a message 'Hello' three times after a delay of 1 second each, using a for-loop and setTimeout. You can practice this question in any JS editor or your browser console.
-
-  ```jsx
-   // Your Code here
-
-   delayedLoop(3);
-   // should print Hello three times after 1 second each
-   // Output:
-   // Hello -- after 1 second
-   // Hello -- after another 1 second
-   // Hello -- after another 1 second
-   ```
-
-  //5. Make a fake fetch call that takes a message and a boolean value to get data and console the message received from the server. A fake fetch has been provided. You can practice this question in any JS editor or your browser console.
-
-
-  // 6. EXAMPLE QUESTION: (Solution has been provided for this question for your understanding)
-
-  //    Use this URL - https://example.com/api/itemlist to make a fake fetch call and handle errors if any. Show a proper message to the user on the DOM, as per the status and message received from the server. A fakeFetch has been provided. Use HTML, CSS & JS template in REPL or Vanilla template in CodeSandbox for this question.
-
-  ```jsx
    const fakeFetch = (url) => {
      return new Promise((resolve, reject) => {
        setTimeout(() => {
