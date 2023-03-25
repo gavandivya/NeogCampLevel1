@@ -239,7 +239,6 @@ fakeFetch3("https://example.com/api/data")
     }
   })
 
-
 // Output on the DOM should be:
 // Internal Server Error! The server crashed. Please try again in some time.
 
